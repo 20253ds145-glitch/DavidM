@@ -15,7 +15,6 @@ public class ShippingCalculator {
     double iva(double sub) {
         return sub * 0.16;
     }
-
     double tot(double sub, double iva) {
         return sub + iva;
     }
