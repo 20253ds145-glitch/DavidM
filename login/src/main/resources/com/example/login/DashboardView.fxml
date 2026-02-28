@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" spacing="20.0"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.login.DashboardController">
+
+    <Label fx:id="lblMensaje" style="-fx-font-size: 18px;" text="Cargando..." />
+</VBox>
