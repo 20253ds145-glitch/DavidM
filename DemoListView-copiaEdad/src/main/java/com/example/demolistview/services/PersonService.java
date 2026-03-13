@@ -19,21 +19,17 @@ public class PersonService {
             String[] parts = line.split(",");
             String name = parts[0];
             String email = parts[1];
-            // AGREGAMOS ESTO:
             String age = (parts.length > 2) ? parts[2] : "N/A";
 
-            // Modificamos el mensaje para que incluya la edad
             result.add("Nombre: " + name + " | " + email + " | Edad: " + age);
         }
         return result;
     }
 
     public void addPerson(String name, String email, String age) throws Exception {
-        // 1. Validamos los tres datos antes de hacer cualquier cosa
+
         validate(name, email, age);
 
-        // 2. Si la validación pasó, guardamos en el archivo
-        // Usamos comas sin espacios para que el CSV sea más fácil de leer después
         repo.appendNewLine(name + "," + email + "," + age);
     }
 
@@ -47,7 +43,6 @@ public class PersonService {
 
         int ageInt;
         try {
-            // El .trim() es la clave aquí para limpiar el texto
             ageInt = Integer.parseInt(age.trim());
         } catch (NumberFormatException e) {
             throw new Exception("La edad debe ser un número entero (ej: 25).");

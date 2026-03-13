@@ -39,7 +39,6 @@ public class AppControllers {
             String email = txtEmail.getText().trim();
             String age = txtAge.getText().trim(); // El trim() quita espacios accidentales
 
-// Asegúrate de enviar los TRES parámetros al servicio
             service.addPerson(name, email, age);
 
             lblMsg.setText("Persona creada con éxito");
